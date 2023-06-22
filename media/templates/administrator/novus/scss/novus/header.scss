@@ -13,6 +13,55 @@
     .menu-quicktask{
         float: right;
     }
+
+
+
+    li.divider.dropdown-item{
+        border-bottom: 1px solid #ccc;
+        height: 2px;
+    }
+
+
+    .menu-quicktask {
+        position: absolute;
+        right: 16px;
+    }
+
+    ul.collapse-level-2{
+        display: none;
+        background: white;
+        padding: 0.25rem;
+        border: 1px solid #dbdbdb;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        z-index: 10;
+
+    }
+
+    ul.collapse-level-2 li{
+        list-style: none;
+        a{
+            width: 100%;
+            display: block;
+            text-decoration: none;
+            padding: 0.25rem;
+        }
+        a:hover{
+            background: #f1f1f1;
+        }
+    }
+
+    ul.collapse-level-2.show{
+        display: block;
+    }
+
+
+    ul li ul li a.dropdown-toggle::after{
+            transform: rotate(-90deg);
+            
+    }
+
 }
 
 header h1{
@@ -22,4 +71,11 @@ header h1{
 
 .the-site-title{
     font-size: 1.5rem;
+}
+
+#toolbar-holder{
+    background: rgb(219, 219, 219);
+    .btn{
+        margin-right: 0.25rem;
+    }
 }

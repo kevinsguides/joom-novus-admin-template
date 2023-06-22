@@ -56,7 +56,7 @@ $itemIconClass = '';
 $itemImage  = '';
 
 if ($current->hasChildren()) {
-    $linkClass[] = 'dropdown-toggle';
+    $linkClass[] = 'dropdown-toggle toggle-level-'.$current->level;
 
     if ($current->level == 1) {
         $dataToggle  = ' data-bs-toggle="dropdown"';
@@ -155,7 +155,7 @@ if ($this->enabled && $current->hasChildren()) {
     if ($current->level > 1) {
         $id = $current->id ? ' id="menu-' . strtolower($current->id) . '"' : '';
 
-        echo '<ul' . $id . ' class="mm-collapse collapse-level-' . $current->level . '">' . "\n";
+        echo '<ul' . $id . ' class="collapse-level-' . $current->level . ' ">' . "\n";
     } else {
         echo '<ul id="collapse' . $this->getCounter() . '" class="dropdown-menu">' . "\n";
     }

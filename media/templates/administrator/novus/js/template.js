@@ -16,5 +16,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  let secondLevelDropdown = document.querySelectorAll('#mainAdminMenu .toggle-level-2');
+
+  secondLevelDropdown.forEach(function (dropdown) {
+    dropdown.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      dropdown.nextElementSibling.classList.toggle('show');
+      console.log('showzies');
+    });
+  });
+
+  //when mouse leaves .collapse-level-2.show
+  //remove .show from .collapse-level-2.show
+
+  let secondLevelCollapse = document.querySelectorAll('.collapse-level-2');
+
+  secondLevelCollapse.forEach(function (collapse) {
+    collapse.addEventListener('mouseleave', function () {
+      collapse.classList.remove('show');
+    });
+  }
+  );
+
 
 });

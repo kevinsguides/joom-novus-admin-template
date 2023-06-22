@@ -75,11 +75,13 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 
 <header class="bg-primary text-white">
     <div class="container">
-<span class="float-end the-site-title"><?php 
+<a class="float-end the-site-title link-light text-decoration-none" href="<?php //echo the administrator link 
+    echo Route::_('index.php'); ?>">
+<?php 
     //echo site title
     $title = $app->get('sitename');
     echo $title;
-    ?></span>
+    ?></a>
 <jdoc:include type="modules" name="title" />
 <?php if (!$hiddenMenu) :?>
 <div id="menu">
@@ -87,12 +89,16 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 </div>
 <?php endif; ?>
 </div>
-</header>
 
+</header>
+<div id="toolbar-holder">
+<div class="container p-2">
+<jdoc:include type="modules" name="toolbar" style="none" />
+</div>
+</div>
 
 <div class="container bg-white">
 <main>
-<jdoc:include type="modules" name="toolbar" style="none" />
 <jdoc:include type="message" />
 <jdoc:include type="component" />
 </main>
