@@ -1,12 +1,17 @@
 #mainAdminMenu{
    > ul >.nav-item > a{
         color: white;
+        text-decoration: none;
     }
 
     .nav-item{
         margin-right: 2rem;
         color: white;
         text-decoration: none;
+    }
+
+    .menu-quicktask{
+        float: right;
     }
 }
 

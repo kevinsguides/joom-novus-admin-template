@@ -22,15 +22,6 @@
       "uri": "bootstrap.bundle.min.js"
     },
     {
-      "name": "template.atum.rtl",
-      "description": "The css file to be used when the site is right to left (RTL).",
-      "type": "style",
-      "uri": "template-rtl.min.css",
-      "dependencies": [
-        "fontawesome"
-      ]
-    },
-    {
       "name": "template.active.language",
       "description": "An asset to allow language specific css, eg 'language/[lang-CODE]/[lang-CODE].css', to use it as a dependency to the active template",
       "type": "style",
@@ -66,13 +57,10 @@
       }
     },
     {
-      "name": "template.atum",
+      "name": "template.novus",
       "description": "The file containing the javascript for this template.",
       "type": "script",
-      "uri": "media/templates/administrator/atum/js/template.min.js",
-      "dependencies": [
-        "template.atum-es5"
-      ],
+      "uri": "media/templates/administrator/novus/js/template.js",
       "attributes": {
         "type": "module"
       }

@@ -43,6 +43,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 $statusModules = LayoutHelper::render('status', ['modules' => 'status']);
 
 $wa->useStyle('template.novus');
+$wa->useScript('template.novus');
 
 
 //load js collapse
@@ -61,7 +62,7 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 
 
 
-<body class="admin <?php echo $option . ' view-' . $view . ' layout-' . $layout . ($task ? ' task-' . $task : '') . ($monochrome || $a11y_mono ? ' monochrome' : '') . ($a11y_contrast ? ' a11y_contrast' : '') . ($a11y_highlight ? ' a11y_highlight' : ''); ?>">
+<body class="admin">
 <noscript>
     <div class="alert alert-danger" role="alert">
         <?php echo Text::_('JGLOBAL_WARNJAVASCRIPT'); ?>
@@ -75,7 +76,7 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 <header class="bg-primary text-white">
     <div class="container">
 <span class="float-end the-site-title"><?php 
-    //echo site titl
+    //echo site title
     $title = $app->get('sitename');
     echo $title;
     ?></span>
