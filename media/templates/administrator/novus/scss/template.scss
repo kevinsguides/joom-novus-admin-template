@@ -1,0 +1,56 @@
+// Remove prefix added in BS5 for compat with Joomla beta's shipped with Betas
+$prefix: "";
+
+@import "vendor/awesomplete/awesomplete";
+@import "vendor/bootstrap53/bootstrap";
+
+@import "novus/header";
+
+
+body{
+  background: #e7e7e7;
+}
+
+
+// @import "blocks/global"; // Leave this first
+
+// // jQuery Minicolors
+// @import "../../../../system/scss/jquery-minicolors";
+
+
+
+// // Blocks
+// @import "blocks/alerts";
+// @import "blocks/edit";
+// @import "blocks/header";
+// @import "blocks/form";
+// @import "blocks/icons";
+// @import "blocks/iframe";
+// @import "blocks/layout";
+// @import "blocks/login";
+// @import "blocks/modals";
+// @import "blocks/quickicons";
+// @import "blocks/lists";
+// @import "blocks/sidebar";
+// @import "blocks/sidebar-nav";
+// @import "blocks/switcher";
+// @import "blocks/toolbar";
+// @import "blocks/treeselect";
+// @import "blocks/utilities";
+
+// // These DO NOT BELONG HERE!!!
+// @import "vendor/codemirror";
+// @import "vendor/dragula";
+// @import "vendor/tinymce";
+
+// // Also these DO NOT BELONG HERE!!!
+// // Page specifics
+// @import "pages/com_config";
+// @import "pages/com_content";
+// @import "pages/com_cpanel";
+// @import "pages/com_joomlaupdate";
+// @import "pages/com_modules";
+// @import "pages/com_tags";
+// @import "pages/com_privacy";
+// @import "pages/com_templates";
+// @import "pages/com_users";
