@@ -18,7 +18,9 @@ body{
 // @import "../../../../system/scss/jquery-minicolors";
 
 
-
+$quickicon-icon-size: 32px;
+$display2-size: 1rem;
+$bold-weight: 600;
 // // Blocks
 // @import "blocks/alerts";
 // @import "blocks/edit";
@@ -26,10 +28,10 @@ body{
 // @import "blocks/form";
 // @import "blocks/icons";
 // @import "blocks/iframe";
-// @import "blocks/layout";
+ @import "blocks/layout";
 // @import "blocks/login";
 // @import "blocks/modals";
-// @import "blocks/quickicons";
+ @import "blocks/quickicons";
 // @import "blocks/lists";
 // @import "blocks/sidebar";
 // @import "blocks/sidebar-nav";
