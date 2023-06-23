@@ -141,23 +141,26 @@ if ($currentParams->get('menu-quicktask') && (int) $this->params->get('shownew',
     }
 }
 
-if (!empty($current->dashboard)) {
-    $titleDashboard = Text::sprintf('MOD_MENU_DASHBOARD_LINK', Text::_($current->title));
-    echo '<span class="menu-dashboard"><a href="'
-        . Route::_('index.php?option=com_cpanel&view=cpanel&dashboard=' . $current->dashboard) . '">'
-        . '<span class="icon-th-large" title="' . $titleDashboard . '" aria-hidden="true"></span>'
-        . '<span class="visually-hidden">' . $titleDashboard . '</span>'
-        . '</a></span>';
-}
+
 
 // Recurse through children if they exist
 if ($this->enabled && $current->hasChildren()) {
+
     if ($current->level > 1) {
         $id = $current->id ? ' id="menu-' . strtolower($current->id) . '"' : '';
 
         echo '<ul' . $id . ' class="collapse-level-' . $current->level . ' ">' . "\n";
     } else {
         echo '<ul id="collapse' . $this->getCounter() . '" class="dropdown-menu">' . "\n";
+    }
+
+    if (!empty($current->dashboard)) {
+        $titleDashboard = Text::sprintf('MOD_MENU_DASHBOARD_LINK', Text::_($current->title));
+        echo '<li class="dropdown-item"><span class="menu-dashboard"><a href="'
+            . Route::_('index.php?option=com_cpanel&view=cpanel&dashboard=' . $current->dashboard) . '">'
+            . '<span class="icon-th-large" title="' . $titleDashboard . '" aria-hidden="true"></span>'
+            . '<span class="visually-hidden">' . $titleDashboard . '</span> Dashboard'
+            . '</a></span></li>';
     }
 
     // WARNING: Do not use direct 'include' or 'require' as it is important to isolate the scope for each call

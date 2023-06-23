@@ -1,5 +1,7 @@
 // Quick Icons
 
+
+
 .quick-icons {
   background-color: $white;
 
@@ -137,6 +139,7 @@
     overflow: hidden;
     border: 1px solid hsl(var(--hue),50%,93%);
     border-radius: 4px;
+  
   }
 }
 
@@ -144,3 +147,5 @@
   position: absolute;
   inset-inline-end: 1.25rem;
 }
+
+

@@ -75,13 +75,13 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 
 <header class="bg-primary text-white">
     <div class="container">
-<a class="float-end the-site-title link-light text-decoration-none" href="<?php //echo the administrator link 
+<a class="float-start the-site-title link-light text-decoration-none" href="<?php //echo the administrator link 
     echo Route::_('index.php'); ?>">
 <?php 
     //echo site title
     $title = $app->get('sitename');
     echo $title;
-    ?></a>
+    ?> : </a>
 <jdoc:include type="modules" name="title" />
 <?php if (!$hiddenMenu) :?>
 <div id="menu">
@@ -97,8 +97,8 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 </div>
 </div>
 
-<div class="container bg-white">
-<main>
+<div class="container mt-3 pt-3">
+<main class="card card-body">
 <jdoc:include type="message" />
 <jdoc:include type="component" />
 </main>

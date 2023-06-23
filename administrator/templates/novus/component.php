@@ -19,24 +19,8 @@ $wa = $this->getWebAssetManager();
 // Get the hue value
 preg_match('#^hsla?\(([0-9]+)[\D]+([0-9]+)[\D]+([0-9]+)[\D]+([0-9](?:.\d+)?)?\)$#i', $this->params->get('hue', 'hsl(214, 63%, 20%)'), $matches);
 
-// Enable assets
-$wa->usePreset('template.atum.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'))
-    ->useStyle('template.active.language')
-    ->useStyle('template.user')
-    ->addInlineStyle(':root {
-		--hue: ' . $matches[1] . ';
-		--template-bg-light: ' . $this->params->get('bg-light', '--template-bg-light') . ';
-		--template-text-dark: ' . $this->params->get('text-dark', '--template-text-dark') . ';
-		--template-text-light: ' . $this->params->get('text-light', '--template-text-light') . ';
-		--template-link-color: ' . $this->params->get('link-color', '--template-link-color') . ';
-		--template-special-color: ' . $this->params->get('special-color', '--template-special-color') . ';
-	}');
 
-// No template.js for modals
-$wa->disableScript('template.atum');
 
-// Override 'template.active' asset to set correct ltr/rtl dependency
-$wa->registerStyle('template.active', '', [], [], ['template.atum.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr')]);
 
 // Browsers support SVG favicons
 $this->addHeadLink(HTMLHelper::_('image', 'joomla-favicon.svg', '', [], true, 1), 'icon', 'rel', ['type' => 'image/svg+xml']);

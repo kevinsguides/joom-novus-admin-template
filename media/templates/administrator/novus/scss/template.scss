@@ -5,14 +5,15 @@ $prefix: "";
 @import "vendor/bootstrap53/bootstrap";
 
 @import "novus/header";
+@import "novus/chromes";
 
 
 body{
-  background: #e7e7e7;
+  background: #8a8c9c !important;
 }
 
 
-// @import "blocks/global"; // Leave this first
+@import "blocks/global"; // Leave this first
 
 // // jQuery Minicolors
 // @import "../../../../system/scss/jquery-minicolors";
@@ -21,38 +22,50 @@ body{
 $quickicon-icon-size: 32px;
 $display2-size: 1rem;
 $bold-weight: 600;
+@import "variables";
 // // Blocks
-// @import "blocks/alerts";
-// @import "blocks/edit";
-// @import "blocks/header";
-// @import "blocks/form";
-// @import "blocks/icons";
-// @import "blocks/iframe";
+ @import "blocks/alerts";
+ @import "blocks/edit";
+ @import "blocks/header";
+ @import "blocks/form";
+ @import "blocks/icons";
+ @import "blocks/iframe";
  @import "blocks/layout";
-// @import "blocks/login";
-// @import "blocks/modals";
+ @import "blocks/login";
+ @import "blocks/modals";
  @import "blocks/quickicons";
-// @import "blocks/lists";
-// @import "blocks/sidebar";
-// @import "blocks/sidebar-nav";
-// @import "blocks/switcher";
-// @import "blocks/toolbar";
-// @import "blocks/treeselect";
-// @import "blocks/utilities";
+ @import "blocks/lists";
+ @import "blocks/sidebar";
+ @import "blocks/sidebar-nav";
+ @import "blocks/switcher";
+@import "blocks/toolbar";
+ @import "blocks/treeselect";
+ @import "blocks/utilities";
 
 // // These DO NOT BELONG HERE!!!
-// @import "vendor/codemirror";
-// @import "vendor/dragula";
-// @import "vendor/tinymce";
+ @import "vendor/codemirror";
+ @import "vendor/dragula";
+ @import "vendor/tinymce";
 
 // // Also these DO NOT BELONG HERE!!!
 // // Page specifics
-// @import "pages/com_config";
-// @import "pages/com_content";
-// @import "pages/com_cpanel";
-// @import "pages/com_joomlaupdate";
-// @import "pages/com_modules";
-// @import "pages/com_tags";
-// @import "pages/com_privacy";
-// @import "pages/com_templates";
-// @import "pages/com_users";
+ @import "pages/com_config";
+ @import "pages/com_content";
+ @import "pages/com_cpanel";
+ @import "pages/com_joomlaupdate";
+ @import "pages/com_modules";
+ @import "pages/com_tags";
+ @import "pages/com_privacy";
+ @import "pages/com_templates";
+ @import "pages/com_users";
+
+
+ .quickicon-group, .quickicon-single{
+  background: rgb(243, 243, 250);
+  border: 1px solid #ccc;
+ }
+
+ .quickicon-group:hover, .quickicon-single:hover{
+  background: rgb(96, 96, 112);
+  border: 1px solid #ccc;
+ }
