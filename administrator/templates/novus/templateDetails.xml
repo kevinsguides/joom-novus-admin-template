@@ -49,4 +49,9 @@
 	<config>
 
 	</config>
+
+	<updateservers>
+        <server type="extension" priority="1" name="novus">https://raw.githubusercontent.com/kevinsguides/plg_imgcomparer/main/imgcomparerupdates.xml</server>
+    </updateservers>
+
 </extension>
