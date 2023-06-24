@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
-  "name": "atum",
+  "name": "novus",
   "version": "4.0.0",
-  "description": "This file contains details of the assets used by Atum, the default Joomla 4 administrator template.",
+  "description": "This file contains details of the assets used by novus, the default Joomla 4 administrator template.",
   "license": "GPL-2.0-or-later",
   "assets": [
     {
@@ -44,10 +44,10 @@
       ]
     },
     {
-      "name": "template.atum-es5",
+      "name": "template.novus-es5",
       "description": "The file containing the javascript for this template.",
       "type": "script",
-      "uri": "media/templates/administrator/atum/js/template-es5.min.js",
+      "uri": "media/templates/administrator/novus/js/template-es5.min.js",
       "dependencies": [
         "core"
       ],
@@ -71,31 +71,31 @@
       "type": "script",
       "uri": "",
       "dependencies": [
-        "template.atum"
+        "template.novus"
       ]
     },
     {
-      "name": "template.atum.base",
+      "name": "template.novus.base",
       "type": "preset",
       "dependencies": [
         "core#script",
-        "template.atum#script"
+        "template.novus#script"
       ]
     },
     {
-      "name": "template.atum.ltr",
+      "name": "template.novus.ltr",
       "type": "preset",
       "dependencies": [
-        "template.atum.base",
-        "template.atum.ltr#style"
+        "template.novus.base",
+        "template.novus.ltr#style"
       ]
     },
     {
-      "name": "template.atum.rtl",
+      "name": "template.novus.rtl",
       "type": "preset",
       "dependencies": [
-        "template.atum.base",
-        "template.atum.rtl#style"
+        "template.novus.base",
+        "template.novus.rtl#style"
       ]
     },
     {
