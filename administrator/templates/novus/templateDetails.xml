@@ -51,7 +51,7 @@
 	</config>
 
 	<updateservers>
-        <server type="extension" priority="1" name="novus">https://raw.githubusercontent.com/kevinsguides/plg_imgcomparer/main/imgcomparerupdates.xml</server>
+        <server type="extension" priority="1" name="novus">https://raw.githubusercontent.com/kevinsguides/joom-novus-admin-template/main/updateserver.xml</server>
     </updateservers>
 
 </extension>
