@@ -1,0 +1,10 @@
+.quickicon-group, .quickicon-single{
+    background: rgb(225,225,235);
+    background: linear-gradient(180deg, rgba(225,225,235,1) 0%, rgba(240,241,251,1) 59%, rgba(219,221,224,1) 100%);
+    border: 1px solid #474747 !important;
+   }
+  
+   .quickicon-group:hover, .quickicon-single:hover{
+    background: rgb(96, 96, 112);
+    border: 1px solid #838383 !important;
+   }

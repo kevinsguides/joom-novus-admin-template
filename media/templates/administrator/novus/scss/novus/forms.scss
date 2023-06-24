@@ -1,5 +1,5 @@
 .switcher .toggle-outside {
-    border: solid 1px hsl(248, 33%, 13%);
+    border: solid 1px hsl(249, 7%, 38%);
     border-radius: 0.25rem;
 }
 
@@ -41,6 +41,12 @@
     background-color: #ffffff !important;
     border-bottom: 3px solid #1a015f;
   }
+
+  joomla-tab > button[role=region][aria-expanded=true], joomla-tab > button[role=region]:hover, joomla-tab > button[role=region]:focus{
+    background-color: #1a015f !important;
+    color: white;
+  }
+  
   
   form.main-card{
   

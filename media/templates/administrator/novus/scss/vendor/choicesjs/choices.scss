@@ -117,11 +117,11 @@
   .choices__inner {
     padding-inline-end: $form-select-indicator-padding;
     cursor: pointer;
-    background: url("../../../images/select-bg.svg") no-repeat 100%/116rem;
+    background: url("../images/select-bg.svg") no-repeat 100%/116rem;
     background-color: $form-select-bg;
 
     [dir="rtl"] & {
-      background: url("../../../images/select-bg-rtl.svg") no-repeat 0/116rem;
+      background: url("../images/select-bg-rtl.svg") no-repeat 0/116rem;
       background-color: $form-select-bg;
     }
   }

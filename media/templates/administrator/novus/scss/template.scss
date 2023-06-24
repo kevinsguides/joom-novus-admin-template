@@ -6,7 +6,7 @@ $prefix: "";
 
 
 body{
-  background: #8a8c9c !important;
+  background: #ffffff !important;
 }
 
 
@@ -43,7 +43,7 @@ $bold-weight: 600;
  @import "vendor/codemirror";
  @import "vendor/dragula";
  @import "vendor/tinymce";
-
+ @import "vendor/choicesjs/choices";
 // // Also these DO NOT BELONG HERE!!!
 // // Page specifics
  @import "pages/com_config";
@@ -56,23 +56,15 @@ $bold-weight: 600;
  @import "pages/com_templates";
  @import "pages/com_users";
 
- @import "novus/header";
+@import "novus/header";
 @import "novus/chromes";
 @import "novus/tables";
 @import "novus/forms";
-
-
- .quickicon-group, .quickicon-single{
-  background: rgb(225,225,235);
-  background: linear-gradient(180deg, rgba(225,225,235,1) 0%, rgba(240,241,251,1) 59%, rgba(219,221,224,1) 100%);
-  border: 1px solid #838383;
- }
-
- .quickicon-group:hover, .quickicon-single:hover{
-  background: rgb(96, 96, 112);
-  border: 1px solid #838383;
- }
-
+@import "novus/modals";
+@import "novus/quickicons";
+@import "novus/commedia";
+@import "novus/footer";
+@import "novus/bsoverrides";
 .card-columns .card{
   margin-bottom: 0.5rem;
 }
@@ -81,6 +73,7 @@ $bold-weight: 600;
 
 :root{
   --template-bg-dark: #37383d;
+  --template-bg-light: #f8f8f8;
   --btn-bg: #c3c6d4;
 }
 
@@ -110,4 +103,10 @@ $bold-weight: 600;
 
 body{
   font-family: "SourceSansPro", sans-serif;
+}
+
+#mainpagearea{
+  background: url('../images/interlaced.png') repeat;
+  min-height: 80vh;
+  border-bottom: 1px solid #c7c7c7;
 }

@@ -1,0 +1,35 @@
+
+//for each .jviewport-heightXX in every 10th increment
+@for $i from 10 through 100 {
+    .jviewport-height#{$i} {
+        height: #{$i}vh;
+    }
+}
+
+@for $i from 10 through 100 {
+    .jviewport-width#{$i} {
+        width: #{$i}vw;
+    }
+}
+
+
+.modal-dialog.modal-lg{
+    height: 100%;
+}
+
+.modal-dialog{
+    .jviewport-height70{
+        height: 70vh;
+    }
+
+    iframe{
+        height: 100%;
+        width: 100%;
+        background-color: white;
+    }
+}
+
+
+.comModulesSelectCard{
+    border: 1px solid #838383;
+}

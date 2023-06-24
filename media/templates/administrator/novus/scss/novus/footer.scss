@@ -1,0 +1,19 @@
+footer{
+    background: rgb(14,14,60);
+    background: linear-gradient(0deg, rgba(14,14,60,1) 0%, rgba(1,0,24,1) 100%);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+    a{
+        color: #ffffff;
+        &:hover{
+            color: #ffffff;
+        }
+        &[target=_blank]::before{
+            display: none;
+        }
+    }
+}

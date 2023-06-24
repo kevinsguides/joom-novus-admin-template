@@ -5,7 +5,7 @@
     }
 
     .nav-item{
-        margin-right: 2rem;
+        
         color: white;
         text-decoration: none;
     }
@@ -116,24 +116,102 @@ header h1{
 
 .the-site-title{
     font-size: 1.5rem;
+    padding: 0.5rem 2rem;
 }
 
 #toolbar-holder{
     background: rgb(219, 219, 219);
-    .btn{
-        margin-right: 0.25rem;
+    border-bottom: 1px solid #c7c7c7;
+    .btn-group,  joomla-toolbar-button {
+        -webkit-margin-start: 0.75rem;
+        margin-inline-start: 0.75rem;
+    }
+
+    .btn-group:not(:last-child)>.dropdown-toggle-split {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        -webkit-margin-start: -0.25rem;
+        border-radius: 0 0.25rem 0.25rem 0;
+        margin-inline-start: -0.25rem;
+        order: 1;
     }
 }
 
 header{
+
+    background: rgb(52,52,203);
+    background: linear-gradient(180deg, rgb(48, 60, 129) 0%, rgba(4,0,66,1) 100%);
+
     .dropdown-menu{
         color: black !important;
+
+        .dropdown-item{
+            .home-image.icon-home{
+                float: left;
+                margin-right: 0.25rem;
+            }
+        }
     }
 
     .header-item-content a, .header-item-content button{
         color: black !important;
         .header-item-text{
             color: white !important;
+        }
+    }
+    
+
+    .header-item-content {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-padding-end: 4px;
+        align-items: center;
+        background-color: #25256b;
+        border-radius: 22px;
+        border: 1px solid rgb(10, 8, 26);
+        color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        line-height: 1rem;
+        padding-inline-end: 4px;
+        margin-left: 0.5rem;
+        @include box-shadow(0 0 5px rgba(0,0,0,0.5));
+
+        &:hover{
+            background-color: #15153b !important;
+        }
+
+        &.joomlaversion{
+            padding: 10px;
+        }
+
+
+
+    }
+
+    .header-items{
+        a[target=_blank]::before{
+            display: none;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    }
+
+    .navbar-nav{
+        .nav-item:first-child{
+            display: none;
+        }
+
+        .nav-item{
+            padding: 0.5rem 1rem 0.5rem 0rem;
+  
+            .icon-fw{
+                margin-right: 0.5rem;
+            }
+
         }
     }
 
@@ -144,4 +222,11 @@ header{
     .icon-angle-down{
         color: white;
     }
+}
+
+#pageTitle{
+    display: flex;
+    align-items: center;
+
+
 }

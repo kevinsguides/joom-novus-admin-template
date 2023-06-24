@@ -71,45 +71,30 @@ HTMLHelper::_('bootstrap.dropdown');
         </div>
     <?php endif; ?>
 
-    <header id="header" class="header d-flex">
+    <header id="header" class="header d-flex bg-primary">
         <div class="header-title d-flex">
             <div class="d-flex align-items-center">
-                <div class="logo">
-                    <?php echo HTMLHelper::_('image', $logoBrandLarge, $logoBrandLargeAlt, ['loading' => 'eager', 'decoding' => 'async'], false, 0); ?>
-                    <?php echo HTMLHelper::_('image', $logoBrandSmall, $logoBrandSmallAlt, ['class' => 'logo-collapsed', 'loading' => 'eager', 'decoding' => 'async'], false, 0); ?>
-                </div>
             </div>
             <jdoc:include type="modules" name="title" />
         </div>
         <?php echo $statusModules; ?>
     </header>
 
-    <div id="wrapper" class="wrapper flex-grow-1">
+    <div id="wrapper" class="wrapper flex-grow-1" style="background: #c7c7c7;">
         <div class="container-fluid container-main">
             <section id="content" class="content h-100">
                 <div class="login_message">
                     <jdoc:include type="message" />
                 </div>
                 <main class="d-flex justify-content-center align-items-center h-100">
-                    <div class="login">
-                        <div class="main-brand logo text-center">
-                            <?php echo HTMLHelper::_('image', $loginLogo, $loginLogoAlt, ['loading' => 'eager', 'decoding' => 'async'], false, 0); ?>
-                        </div>
+                    <div class="login card card-body">
                         <jdoc:include type="component" />
                     </div>
                 </main>
             </section>
         </div>
 
-        <div id="sidebar-wrapper" class="sidebar-wrapper px-3 pb-3">
-            <div id="main-brand" class="main-brand">
-                <h1><?php echo $app->get('sitename'); ?></h1>
-                <h2><?php echo Text::_('TPL_ATUM_BACKEND_LOGIN'); ?></h2>
-            </div>
-            <div id="sidebar">
-                <jdoc:include type="modules" name="sidebar" style="body" />
-            </div>
-        </div>
+      
     </div>
     <jdoc:include type="modules" name="debug" style="none" />
 </body>

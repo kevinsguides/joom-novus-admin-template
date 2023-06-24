@@ -73,19 +73,31 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 
 <?php // Header ?>
 
-<header class="bg-primary text-white">
+<header class="text-white">
     <div class="container">
-        <div class="header-items d-flex ms-auto" id="status-module">
-    <jdoc:include type="modules" name="status" style="none" />
-    </div>
-<a class="float-start the-site-title link-light text-decoration-none" href="<?php //echo the administrator link 
+        <div class="row">
+        <a class="float-start the-site-title link-light text-decoration-none" href="<?php //echo the administrator link 
     echo Route::_('index.php'); ?>">
 <?php 
     //echo site title
     $title = $app->get('sitename');
     echo $title;
-    ?> : </a>
-<jdoc:include type="modules" name="title" />
+    ?> </a>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xxl-5" id="pageTitle">
+       
+
+        <jdoc:include type="modules" name="title" /></div>
+      
+        <div class="col-12 col-xxl-7">
+        <div class="header-items d-flex ms-auto" id="status-module">
+    <jdoc:include type="modules" name="status" style="none" />
+    </div>
+        </div>
+    </div>
+
+
 <?php if (!$hiddenMenu) :?>
 <div id="menu">
 <jdoc:include type="modules" name="menu" style="none" />
@@ -100,12 +112,19 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 </div>
 </div>
 
+<div id="mainpagearea">
 <div class="container mt-3 pt-3">
-<main class="card card-body">
+<main class="card card-body shadow-lg mb-5">
 <jdoc:include type="message" />
 <jdoc:include type="component" />
 </main>
-</div>
 
+</div>
+</div>
+<footer id="footer">
+    <span>Novus Admin Template by <a href="https://kevinsguides.com" target="_blank">Kevin Olson</a>, <a href="https://kevinsguides.com/tips" target="_blank">Donations</a> &amp; <a href="https://kevinsguides.com/contact" target="_blank">Feedback</a> Appreciated :&#41;</span>
+<jdoc:include type="modules" name="footer" style="none" />
+<jdoc:include type="modules" name="debug" style="none" />
+</footer>
 </body>
 </html>
