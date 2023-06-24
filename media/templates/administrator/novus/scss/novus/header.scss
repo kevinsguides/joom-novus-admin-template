@@ -124,3 +124,24 @@ header h1{
         margin-right: 0.25rem;
     }
 }
+
+header{
+    .dropdown-menu{
+        color: black !important;
+    }
+
+    .header-item-content a, .header-item-content button{
+        color: black !important;
+        .header-item-text{
+            color: white !important;
+        }
+    }
+
+
+}
+
+#status-module{
+    .icon-angle-down{
+        color: white;
+    }
+}

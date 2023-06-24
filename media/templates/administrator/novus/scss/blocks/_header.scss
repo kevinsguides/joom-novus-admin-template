@@ -169,8 +169,9 @@
     height: 28px;
     margin: 4px;
     color: $white;
-    background-color: var(--template-bg-dark);
+    background-color: #161616;
     border-radius: 16px;
+    border: 1px solid black;
   }
 
   span {

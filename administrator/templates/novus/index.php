@@ -75,6 +75,9 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 
 <header class="bg-primary text-white">
     <div class="container">
+        <div class="header-items d-flex ms-auto" id="status-module">
+    <jdoc:include type="modules" name="status" style="none" />
+    </div>
 <a class="float-start the-site-title link-light text-decoration-none" href="<?php //echo the administrator link 
     echo Route::_('index.php'); ?>">
 <?php 

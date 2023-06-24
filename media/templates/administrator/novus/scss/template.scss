@@ -4,9 +4,6 @@ $prefix: "";
 @import "vendor/awesomplete/awesomplete";
 @import "vendor/bootstrap53/bootstrap";
 
-@import "novus/header";
-@import "novus/chromes";
-
 
 body{
   background: #8a8c9c !important;
@@ -59,6 +56,11 @@ $bold-weight: 600;
  @import "pages/com_templates";
  @import "pages/com_users";
 
+ @import "novus/header";
+@import "novus/chromes";
+@import "novus/tables";
+@import "novus/forms";
+
 
  .quickicon-group, .quickicon-single{
   background: rgb(225,225,235);
@@ -83,41 +85,29 @@ $bold-weight: 600;
 }
 
 
-div[role="tablist"]{
+
+.btn.dropdown-toggle{
   background: #c3c6d4;
-  padding: 0.25rem;
-  margin-bottom: 0.5rem;
-  button[role="tab"]{
-    background: #c3c6d4!important;
-  }
-}
-
-joomla-tab{
   border: 1px solid #838383;
-
-}
-
-joomla-tab-element{
-  background: #ffffff !important;
-}
-
-#application-form{
-
-  border: 1px solid #838383;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: #f5f5f5;
-
-  .sidebar-nav{
-    border: 1px solid #d8d8d8;
-    height: 100%;
-  }
-  .row{
-    --gutter-x: 0;
-  }
-
-  button[aria-expanded="true"]{
-    background: #eff2ff !important;
+  color: #000000;
+  &:hover{
+    background: #c3c6d4;
+    border: 1px solid #838383;
+    color: #000000;
   }
 }
 
+.subhead .btn[disabled], .btn.dropdown-toggle[disabled] {
+  --subhead-btn-accent: var(--template-bg-dark);
+  background: rgba(101, 118, 134, 0.8);
+  opacity: 0.5;
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+}
+
+body{
+  font-family: "SourceSansPro", sans-serif;
+}

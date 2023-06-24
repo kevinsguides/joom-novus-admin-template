@@ -16,10 +16,7 @@ use Joomla\CMS\HTML\HTMLHelper;
 
 $wa = $this->getWebAssetManager();
 
-// Get the hue value
-preg_match('#^hsla?\(([0-9]+)[\D]+([0-9]+)[\D]+([0-9]+)[\D]+([0-9](?:.\d+)?)?\)$#i', $this->params->get('hue', 'hsl(214, 63%, 20%)'), $matches);
-
-
+$wa->useStyle('template.novus');
 
 
 // Browsers support SVG favicons

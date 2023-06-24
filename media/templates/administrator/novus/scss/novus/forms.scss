@@ -1,0 +1,65 @@
+.switcher .toggle-outside {
+    border: solid 1px hsl(248, 33%, 13%);
+    border-radius: 0.25rem;
+}
+
+
+
+
+  
+  joomla-tab{
+    border: 1px solid #d4d4d4;
+
+    div[role="tablist"]{
+        padding-top: 0.25rem;
+        margin-bottom: 0.5rem;
+        background: #f3f3f3!important;
+    
+        button[role="tab"]{
+
+            background-color: #f3f3f3 !important;
+            color: #333;
+            padding: 0.5rem 1rem;
+            margin-right: 0.25rem;
+            margin-bottom: -1px;
+            cursor: pointer;
+            &:hover{
+
+                background-color: #e3e3e3 !important;
+            }
+    
+        }
+    }
+  
+  }
+  
+  joomla-tab-element{
+    background: #ffffff;
+  }
+
+  joomla-tab > div[role=tablist] > button[role=tab][aria-expanded=true]{
+    background-color: #ffffff !important;
+    border-bottom: 3px solid #1a015f;
+  }
+  
+  form.main-card{
+  
+    border: 1px solid #838383;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: #f5f5f5;
+  
+    .sidebar-nav{
+      border: 1px solid #d8d8d8;
+      height: 100%;
+      li.item.active a{
+        font-weight: 900;
+        text-decoration: underline;
+      }
+    }
+    .row{
+      --gutter-x: 0;
+    }
+
+  }
+
