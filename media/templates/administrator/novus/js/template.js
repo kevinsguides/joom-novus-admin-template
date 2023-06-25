@@ -48,10 +48,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
+  let secondLevelCollapse = document.querySelectorAll(".collapse-level-2");
+
+  //when someone mouses over any .no-dropdown, remove .show from all .collapse-level-2
+
+  let noDropdown = document.querySelectorAll(".item-level-2>.no-dropdown");
+
+  noDropdown.forEach(function (dropdown) {
+    dropdown.addEventListener("mouseover", function () {
+      secondLevelCollapse.forEach(function (collapse) {
+        collapse.classList.remove("show");
+      });
+    });
+  });
+  
+
+
+
+
   //when mouse leaves .collapse-level-2.show
   //remove .show from .collapse-level-2.show
 
-  let secondLevelCollapse = document.querySelectorAll(".collapse-level-2");
+
 
   secondLevelCollapse.forEach(function (collapse) {
     collapse.addEventListener("mouseleave", function () {

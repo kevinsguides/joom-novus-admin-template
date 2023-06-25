@@ -67,7 +67,7 @@
   }
 }
 
-.com_cpanel {
+.cpanel-modules {
 
   .content {
     margin-top: 2rem;
@@ -85,33 +85,17 @@
       border-top: 1px solid var(--border-color);
     }
 
-  }
-
-  .card-header {
-    display: flex;
-    align-items: center;
-    padding: 1rem 1rem .75rem;
-    font-weight: $font-weight-bold;
-    color: var(--template-bg-dark);
-    background: hsla(0, 0%, 100%, .7); // default: var(--card-bg);
-
-    > [class^="icon-"],
-    > img {
-      margin-inline-end: .5rem;
+    .card-header .btn{
+      background: #e7e5f5;
+      border: 1px solid #c7c7c7;
+      color: #23162d;
+      padding: 0.25rem;
     }
 
-    .btn {
-      margin-top: .25em;
-      margin-bottom: .25em;
-    }
   }
 
-  .card-body {
-    padding: 0;
-    overflow: hidden;
-    border-bottom-right-radius: $border-radius;
-    border-bottom-left-radius: $border-radius;
-  }
+
+
 
   .module-actions {
     order: 1;

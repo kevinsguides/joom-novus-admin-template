@@ -36,7 +36,7 @@ if (!$this->enabled) {
 if ($current->level == 1) {
     $class .= ' nav-item';
 } elseif ($current->level == 2) {
-    $class .= ' dropdown-item';
+    $class .= ' dropdown-item item-level-2';
 } elseif ($current->level == 3) {
     $class .= ' item-level-3';
 }
@@ -106,12 +106,18 @@ if ($icon == '' && $iconClass == '' && $current->level == 1 && $current->target 
     $iconClass = '<span aria-hidden="true" class="icon-fw"></span>';
 }
 
+// If we are on level 2 we will add a small button to left of each link to get to the item
+$leftButton = '';
+if ($current->level == 2 && $current->hasChildren() && $link != '#') {
+    $leftButton = '<a href="' . $link . '" class="level2-jumplink" title="Go to index of: '.$current->title.'"><span class="icon-dashboard "> </span></a>';
+}
+
 if ($link != '' && $current->target != '') {
     echo '<a' . $linkClass . $dataToggle . ' href="' . $link . '" target="' . $current->target . '">'
         . $iconClass
         . '<span class="sidebar-item-title">' . $itemImage . Text::_($current->title) . '</span>' . $ajax . '</a>';
 } elseif ($link != '' && $current->type !== 'separator') {
-    echo '<a' . $linkClass . $dataToggle . ' href="' . $link . '" aria-label="' . Text::_($current->title) . '">'
+    echo $leftButton.'<a' . $linkClass . $dataToggle . ' href="' . $link . '" aria-label="' . Text::_($current->title) . '">'
         . $iconClass
         . '<span class="sidebar-item-title">' . $itemImage . Text::_($current->title) . '</span>' . $iconImage . '</a>';
 } elseif ($current->title != '' && $current->type !== 'separator') {

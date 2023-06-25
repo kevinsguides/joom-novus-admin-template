@@ -20,6 +20,25 @@
         a{
             width: 100%;
             display: block;
+            
+        }
+    }
+
+    li.dropdown-item{
+        a{
+            &.level2-jumplink{
+                width: auto;
+                padding: 0.25rem;
+                border: 1px solid grey;
+                position: absolute;
+                left: -16px;
+                background: white;
+                border-radius: 0.25rem;
+                top: 0;
+                &:hover{
+                    background: #f1f1f1;
+                }
+            }
         }
     }
 
@@ -85,7 +104,10 @@
 
 
     ul li ul li a.dropdown-toggle::after{
-            transform: rotate(-90deg);
+            transform: rotate(-90deg) translatey(-50%);
+            position: absolute;
+            right: 5px;
+            top: 50%;
             
     }
 
@@ -139,6 +161,11 @@ header h1{
 
 header{
 
+
+    .navbar-toggler{
+        background: rgb(236, 228, 252);
+    }
+
     background: rgb(52,52,203);
     background: linear-gradient(180deg, rgb(48, 60, 129) 0%, rgba(4,0,66,1) 100%);
 
@@ -185,6 +212,8 @@ header{
         &.joomlaversion{
             padding: 10px;
         }
+
+
 
 
 
