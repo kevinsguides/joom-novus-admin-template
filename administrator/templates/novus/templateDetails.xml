@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="template" client="administrator">
 	<name>novus</name>
-	<version>1.0</version>
+	<version>1.01</version>
 	<creationDate>2023-06</creationDate>
 	<author>Kevin Olson</author>
 	<authorEmail>noreply@kevinsguides.com</authorEmail>

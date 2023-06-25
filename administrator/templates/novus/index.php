@@ -1,9 +1,7 @@
 <?php
 
 /**
- * @package     Joomla.Administrator
- * @subpackage  Templates.Atum
- * @copyright   (C) 2016 Open Source Matters, Inc. <https://www.joomla.org>
+ * @copyright   (C) 2023 Kevin Olson
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  * @since       4.0.0
  */
@@ -30,7 +28,6 @@ $layout       = $input->get('layout', 'default');
 $task         = $input->get('task', 'display');
 $cpanel       = $option === 'com_cpanel' || ($option === 'com_admin' && $view === 'help');
 $hiddenMenu   = $app->getInput()->get('hidemainmenu');
-$sidebarState = $input->cookie->get('atumSidebarState', '');
 
 
 
