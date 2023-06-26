@@ -13,6 +13,7 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
 use Joomla\CMS\Uri\Uri;
+use Joomla\CMS\Factory;
 
 /**
  * =========================================================================================================
@@ -54,6 +55,25 @@ $dataToggle = '';
 $iconClass  = '';
 $itemIconClass = '';
 $itemImage  = '';
+
+
+// figure out if we're in a component view
+$app = Factory::getApplication();
+$option = $app->input->get('option', '', 'cmd');
+
+
+if (strpos($current->link, $option) !== false) {
+
+    //make sure it's not com_categories
+    if (strpos($current->link, 'com_categories') === false) {
+        //add active class to $linkClass array
+        $linkClass[] = 'activeComponentMenuItem';
+    }
+
+}
+
+
+
 
 if ($current->hasChildren()) {
     $linkClass[] = 'dropdown-toggle toggle-level-'.$current->level;
