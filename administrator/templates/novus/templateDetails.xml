@@ -46,7 +46,23 @@
 		<language tag="en-GB">en-GB/tpl_novus.ini</language>
 		<language tag="en-GB">en-GB/tpl_novus.sys.ini</language>
 	</languages>
+
 	<config>
+		<fields name="params">
+			<fieldset name="basic" label="TPL_NOVUS_BASIC_LABEL">
+				<field
+					name="preferDesktop"
+					type="radio"
+					label="TPL_NOVUS_PREFERDESKTOP_LABEL"
+					description="TPL_NOVUS_PREFERDESKTOP_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
 
 	</config>
 

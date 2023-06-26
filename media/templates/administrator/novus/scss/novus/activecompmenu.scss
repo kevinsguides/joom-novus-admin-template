@@ -1,0 +1,73 @@
+#activeComponentMenuContainer.show{
+    display: block;
+}
+
+#activeComponentMenuContainer{
+    display: none;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    top:20vh;
+    background: white;
+    padding: 3rem 0.25rem 0.25rem 0.25rem;
+    border-radius: 0 0.5rem .5rem 0;
+
+    @include box-shadow(0 0 10px rgba(0,0,0,0.5));
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        a{
+            color: white;
+            background: #212742;
+            border: 1px solid #838383;
+            padding: 0.5rem;
+            display: block;
+            text-decoration: none;
+            &:hover{
+                background: #121522;
+                border: 1px solid #838383;
+                color: white;
+            }
+        }
+        .dropdown-toggle::after{
+            display: none;
+        }
+    }
+
+    &.sizeSmaller{
+        top: 3vh;
+        ul{
+            a{
+                padding: 0.25rem;
+                font-size: 0.9rem;
+            }
+                    //make it scrollable
+        max-height: 80vh;
+        overflow-y: scroll;
+        }
+
+    }
+
+    #sideNavMenuToggleCollapse{
+        cursor: pointer;
+        font-size: 32px;
+        position: absolute;
+        top: 0;
+        right: 5px;
+    }
+}
+
+#sideNavMenuToggleShow{
+    position: fixed;
+    top: 20vh;
+    left: 0;
+    z-index: 100;
+    background: #212742;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0 0.5rem .5rem 0;
+    @include box-shadow(0 0 10px rgba(0,0,0,0.5));
+    font-size: 32px;
+    cursor: pointer;
+}

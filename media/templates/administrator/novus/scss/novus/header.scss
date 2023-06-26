@@ -58,7 +58,10 @@
 
     .dropdown-item{
         position: relative;
-        padding-right: 2.5rem;
+        padding-right: 0.5rem;
+        &:has(>.menu-quicktask){
+            padding-right: 3rem;
+        }
     }
 
 
@@ -79,11 +82,11 @@
         top: 0;
         z-index: 10;
         @include box-shadow(0 0 5px rgba(0,0,0,0.2));
+
+        max-height: 50vh;
+        overflow-y: scroll;
     }
 
-    .item-level-3{
-        padding-right: 2.5rem;
-    }
 
     ul.collapse-level-2 li{
         list-style: none;
@@ -258,4 +261,10 @@ header{
     align-items: center;
 
 
+}
+
+body.prefer-desktop{
+    .level2-jumplink{
+        display: none !important;
+    }
 }

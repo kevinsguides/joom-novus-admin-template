@@ -22,6 +22,8 @@ $wa->getRegistry()->addExtensionRegistryFile('com_cpanel');
 
 
 
+
+
 echo '<nav class="navbar navbar-expand-lg">
 <div class="container-fluid">
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainAdminMenu" aria-controls="mainAdminMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,3 +43,4 @@ if ($root->hasChildren()) {
 }
 
 echo '</ul></div></div></nav>';
+

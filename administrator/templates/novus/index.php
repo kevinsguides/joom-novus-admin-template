@@ -29,10 +29,23 @@ $task         = $input->get('task', 'display');
 $cpanel       = $option === 'com_cpanel' || ($option === 'com_admin' && $view === 'help');
 $hiddenMenu   = $app->getInput()->get('hidemainmenu');
 
+//get template params preferDesktop
+$params = $app->getTemplate(true)->params;
+$preferDesktop = $params->get('preferDesktop');
 
 
 // Set some meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
+
+//check for adminSidebarExpanded cookie
+if(!isset($_COOKIE['adminSidebarExpanded'])){
+    $adminSidebarExpanded = true;
+}else{
+    $adminSidebarExpanded = $_COOKIE['adminSidebarExpanded'];
+}
+
+
+
 
 
 
@@ -59,7 +72,7 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 
 
 
-<body class="admin">
+<body class="admin <?php echo (($preferDesktop) ? 'prefer-desktop' : ''); ?>">
 <noscript>
     <div class="alert alert-danger" role="alert">
         <?php echo Text::_('JGLOBAL_WARNJAVASCRIPT'); ?>
@@ -103,6 +116,18 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 </div>
 
 </header>
+<a id="sideNavMenuToggleShow" title="Show contextual menu">
+<span class="icon-menu"> </span>
+</a>
+<div id="activeComponentMenuContainer" class="<?php echo (($adminSidebarExpanded) ? 'show' : ''); ?>">
+<a id="sideNavMenuToggleCollapse" title="Collapse context menu">
+<span class="icon-arrow-left-2"> </span>
+</a>
+
+    <ul id="activeComponentMenu">
+</ul>
+</div>
+
 <div id="toolbar-holder">
 <div class="container p-2">
 <jdoc:include type="modules" name="toolbar" style="none" />
