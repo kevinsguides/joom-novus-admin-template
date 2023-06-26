@@ -31,7 +31,7 @@ $hiddenMenu   = $app->getInput()->get('hidemainmenu');
 
 //get template params preferDesktop
 $params = $app->getTemplate(true)->params;
-$preferDesktop = $params->get('preferDesktop');
+$preferDesktop = $params->get('preferDesktop', 1);
 
 
 // Set some meta data
