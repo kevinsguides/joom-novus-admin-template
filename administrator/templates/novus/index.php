@@ -85,27 +85,27 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 
 <header class="text-white">
     <div class="container">
-        <div class="row">
-        <a class="float-start the-site-title link-light text-decoration-none" href="<?php //echo the administrator link 
+    <div class="row">
+        <div class="col">
+
+
+    <div class="d-inline"><jdoc:include type="modules" name="title" /></div>
+    <a class="link-light text-decoration-none float-end the-site-title" href="<?php //echo the administrator link 
     echo Route::_('index.php'); ?>">
 <?php 
     //echo site title
     $title = $app->get('sitename');
     echo $title;
     ?> </a>
-    </div>
+</div>
+</div>
     <div class="row">
-        <div class="col-12 col-xxl-5" id="pageTitle">
-       
-
-        <jdoc:include type="modules" name="title" /></div>
-      
-        <div class="col-12 col-xxl-7">
-        <div class="header-items d-flex ms-auto" id="status-module">
-    <jdoc:include type="modules" name="status" style="none" />
-    </div>
+        <div class="header-items d-flex ms-auto float-end" id="status-module">
+        <jdoc:include type="modules" name="status" style="none" />
         </div>
     </div>
+
+
 
 
 <?php if (!$hiddenMenu) :?>
