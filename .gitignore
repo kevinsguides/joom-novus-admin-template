@@ -1,0 +1,15 @@
+**/
+*
+!.gitignore
+!readme.md
+!updateserver.xml
+!administrator/
+!administrator/templates
+!administrator/templates/novus
+!administrator/templates/novus/**
+
+!media/
+!media/templates
+!media/templates/administrator
+!media/templates/administrator/novus
+!media/templates/administrator/novus/**
