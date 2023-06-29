@@ -4,10 +4,10 @@
     <description>Latest version of the Novus admin template</description>
     <element>novus</element>
     <type>template</type>
-    <version>1.05</version>
+    <version>1.10</version>
     <infourl title="KevinsGuides">https://kevinsguides.com/guides/webdev/joomla4/free-extensions/novus-joomla</infourl>
     <downloads>
-      <downloadurl type="full" format="zip">https://github.com/kevinsguides/joom-novus-admin-template/releases/download/v1.05/tpl_admin_novus_1.05.zip</downloadurl>
+      <downloadurl type="full" format="zip">https://github.com/kevinsguides/joom-novus-admin-template/releases/download/v1.10/tpl_admin_novus_1.10.zip</downloadurl>
     </downloads>
     <tags>
       <tag>stable</tag>

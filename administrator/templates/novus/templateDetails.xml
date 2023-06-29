@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="template" client="administrator" method="upgrade">
 	<name>novus</name>
-	<version>1.05</version>
-	<creationDate>2023-06</creationDate>
+	<version>1.10</version>
+	<creationDate>2023-07</creationDate>
 	<author>Kevin Olson</author>
 	<authorEmail>noreply@kevinsguides.com</authorEmail>
 	<copyright>(C) 2023 Kevin Olson</copyright>
