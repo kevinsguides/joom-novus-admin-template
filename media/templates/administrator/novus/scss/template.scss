@@ -65,6 +65,7 @@ $bold-weight: 600;
 @import "novus/commedia";
 @import "novus/footer";
 @import "novus/bsoverrides";
+@import "novus/buttons";
 @import "novus/activecompmenu";
 .card-columns .card{
   margin-bottom: 0.5rem;
@@ -75,7 +76,7 @@ $bold-weight: 600;
 :root{
   --template-bg-dark: #37383d;
   --template-bg-light: #f8f8f8;
-  --btn-bg: #c3c6d4;
+  --btn-bg: #f8f8f8;
 }
 
 

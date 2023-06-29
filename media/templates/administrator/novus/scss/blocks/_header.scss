@@ -110,6 +110,10 @@
   width: 50%;
   margin: 15px;
   margin-inline-start: auto;
+  flex-wrap: wrap;
+    /* flex-direction: row; */
+    row-gap: 0.5rem;
+  width: 100%;
 
   .dropdown-toggle {
     background-color: transparent;
@@ -214,14 +218,11 @@
 
 @include media-breakpoint-down(md) {
   .header-items {
-    position: fixed;
     bottom: 0;
     flex-direction: row-reverse;
     width: 100%;
     padding: 10px 0;
     margin: 0;
-    background: var(--template-bg-dark);
-
     .#{$jicon-css-prefix}-angle-down,
     .#{$fa-css-prefix}-angle-down {
       transform: rotate(180deg);

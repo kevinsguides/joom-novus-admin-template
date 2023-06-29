@@ -58,9 +58,17 @@
 
     .dropdown-item{
         position: relative;
-        padding-right: 0.5rem;
-        &:has(>.menu-quicktask){
-            padding-right: 3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        a{
+            display: flex;
+            text-decoration: none;
+            align-items: baseline;
+        }
+
+
+        .submenuiconimg{
+            display: inline-block;
         }
     }
 
@@ -116,11 +124,7 @@
 
 
 
-    .dropdown-item a{
-        width: 100%;
-        display: block;
-        text-decoration: none;
-    }
+
 
     .menu-dashboard a{
         width: 100%;
@@ -128,6 +132,10 @@
 
     .dropdown-item:has(span.menu-dashboard){
         border-bottom: 1px solid #ccc;
+    }
+
+    li:has(>.menu-quicktask){
+        padding-right: 3rem;
     }
 
 
@@ -166,7 +174,7 @@ header{
 
 
     .navbar-toggler{
-        background: rgb(236, 228, 252);
+        background: rgb(255, 255, 255);
     }
 
     background: rgb(52,52,203);
@@ -175,12 +183,6 @@ header{
     .dropdown-menu{
         color: black !important;
 
-        .dropdown-item{
-            .home-image.icon-home{
-                float: left;
-                margin-right: 0.25rem;
-            }
-        }
     }
 
     .header-item-content a, .header-item-content button{
@@ -266,5 +268,27 @@ header{
 body.prefer-desktop{
     .level2-jumplink{
         display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    #mainAdminMenu ul.collapse-level-2.show{
+        display: block;
+        position: relative;
+        left: 0;
+        margin-top: 0.5rem;
+    }
+    #mainAdminMenu ul li ul li a.dropdown-toggle::after {
+        transform: rotate(0deg) translatey(-50%);
+        position: absolute;
+        right: 5px;
+        top: 50%;
+    }
+
+    .dropdown-item:has(.collapse-level-2.show){
+        a.dropdown-toggle::after{
+            display: none;
+        }
     }
 }

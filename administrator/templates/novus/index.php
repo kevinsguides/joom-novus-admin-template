@@ -100,7 +100,7 @@ HTMLHelper::_('bootstrap.dropdown', '.toggler-burger');
 </div>
 </div>
     <div class="row">
-        <div class="header-items d-flex ms-auto float-end" id="status-module">
+        <div class="header-items d-flex ms-auto" id="status-module">
         <jdoc:include type="modules" name="status" style="none" />
         </div>
     </div>

@@ -105,12 +105,12 @@ $iconImage = $current->icon;
 $homeImage = '';
 
 if ($iconClass === '' && $itemIconClass) {
-    $iconClass = '<span class="' . $itemIconClass . '" aria-hidden="true"></span>';
+    $iconClass = '<span class="submenuicon' . $itemIconClass . '" aria-hidden="true"></span>';
 }
 
 if ($iconImage) {
     if (substr($iconImage, 0, 6) == 'class:' && substr($iconImage, 6) == 'icon-home') {
-        $iconImage = '<span class="home-image icon-home" aria-hidden="true"></span>';
+        $iconImage = '<span class="submenuiconimg home-image icon-home me-1" aria-hidden="true"></span>';
         $iconImage .= '<span class="visually-hidden">' . Text::_('JDEFAULT') . '</span>';
     } elseif (substr($iconImage, 0, 6) == 'image:') {
         $iconImage = '&nbsp;<span class="badge">' . substr($iconImage, 6) . '</span>';
@@ -129,7 +129,7 @@ if ($icon == '' && $iconClass == '' && $current->level == 1 && $current->target 
 // If we are on level 2 we will add a small button to left of each link to get to the item
 $leftButton = '';
 if ($current->level == 2 && $current->hasChildren() && $link != '#') {
-    $leftButton = '<a href="' . $link . '" class="level2-jumplink" title="Go to index of: '.$current->title.'"><span class="icon-dashboard "> </span></a>';
+    $leftButton = '<a href="' . $link . '" class="level2-jumplink" title="Go to index of: '.$current->title.'"><span class="icon-dashboard"> </span></a>';
 }
 
 if ($link != '' && $current->target != '') {
@@ -139,7 +139,7 @@ if ($link != '' && $current->target != '') {
 } elseif ($link != '' && $current->type !== 'separator') {
     echo $leftButton.'<a' . $linkClass . $dataToggle . ' href="' . $link . '" aria-label="' . Text::_($current->title) . '">'
         . $iconClass
-        . '<span class="sidebar-item-title">' . $itemImage . Text::_($current->title) . '</span>' . $iconImage . '</a>';
+        . $iconImage . '<span class="sidebar-item-title">' . $itemImage . Text::_($current->title) . '</span></a>';
 } elseif ($current->title != '' && $current->type !== 'separator') {
     echo '<a' . $linkClass . $dataToggle . ' href="#">'
         . $iconClass
@@ -184,7 +184,7 @@ if ($this->enabled && $current->hasChildren()) {
         $titleDashboard = Text::sprintf('MOD_MENU_DASHBOARD_LINK', Text::_($current->title));
         echo '<li class="dropdown-item"><span class="menu-dashboard"><a href="'
             . Route::_('index.php?option=com_cpanel&view=cpanel&dashboard=' . $current->dashboard) . '">'
-            . '<span class="icon-th-large" title="' . $titleDashboard . '" aria-hidden="true"></span>'
+            . '<span class="icon-th-large me-1" title="' . $titleDashboard . '" aria-hidden="true"></span>'
             . '<span class="visually-hidden">' . $titleDashboard . '</span> Dashboard'
             . '</a></span></li>';
     }
